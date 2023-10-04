@@ -46,12 +46,12 @@ export const event = defineType({
     defineField({
       title: "Starts",
       name: "dateStart",
-      type: "datetime"
+      type: "recurringDates"
     }),
     defineField({
       title: "Ends",
       name: "dateEnd",
-      type: "datetime"
+      type: "recurringDates"
     }),
     defineField({
       title: "All day",
