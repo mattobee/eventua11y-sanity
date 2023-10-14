@@ -52,7 +52,7 @@ export const event = defineType({
       title: "Location",
       name: "location",
       type: "string",
-      hidden: ({document}) => document?.attendanceMode === 'online' || document?.attendanceMode === 'none'
+      hidden: ({document}) => document?.attendanceMode === 'online'
     }),
     // defineField({
     //   title: "Country",
