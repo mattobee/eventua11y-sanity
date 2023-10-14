@@ -26,7 +26,8 @@ export const event = defineType({
         list: [
           { title: 'Normal', value: 'normal' },
           { title: 'Theme', value: 'theme' },
-        ]
+        ],
+        layout: 'radio'
       }
     }),
     defineField({
@@ -41,7 +42,8 @@ export const event = defineType({
           { title: 'Offline', value: 'offline' },
           { title: 'Mixed', value: 'mixed'},
           { title: 'None', value: 'none'}
-        ]
+        ],
+        layout: 'radio'
       },
       // hide if type is theme
       hidden: ({document}) => document?.type === 'theme'
