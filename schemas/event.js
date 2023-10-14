@@ -18,6 +18,18 @@ export const event = defineType({
       validation: Rule => Rule.required()
     }),
     defineField({
+      title: "Type",
+      name: "type",
+      type: "string",
+      initialValue: "normal",
+      options: {
+        list: [
+          { title: 'Normal', value: 'normal' },
+          { title: 'Theme', value: 'theme' },
+        ]
+      }
+    }),
+    defineField({
       title: "Attendance Mode",
       name: "attendanceMode",
       type: "string",
@@ -30,7 +42,9 @@ export const event = defineType({
           { title: 'Mixed', value: 'mixed'},
           { title: 'None', value: 'none'}
         ]
-      }
+      },
+      // hide if type is theme
+      hidden: ({document}) => document?.type === 'theme'
     }),
     defineField({
       title: "Location",
@@ -74,18 +88,6 @@ export const event = defineType({
       name: "day",
       type: "boolean",
       initialValue: false
-    }),
-    defineField({
-      title: "Type",
-      name: "type",
-      type: "string",
-      initialValue: "normal",
-      options: {
-        list: [
-          { title: 'Normal', value: 'normal' },
-          { title: 'Theme', value: 'theme' },
-        ]
-      }
     })
   ]
 })
