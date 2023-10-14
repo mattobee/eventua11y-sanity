@@ -18,9 +18,25 @@ export const event = defineType({
       validation: Rule => Rule.required()
     }),
     defineField({
+      title: "Attendance Mode",
+      name: "attendanceMode",
+      type: "string",
+      validation: Rule => Rule.required(),
+      initialValue: "hybrid",
+      options: {
+        list: [
+          { title: 'Online', value: 'online' },
+          { title: 'Offline', value: 'offline' },
+          { title: 'Mixed', value: 'mixed'},
+          { title: 'None', value: 'none'}
+        ]
+      }
+    }),
+    defineField({
       title: "Location",
       name: "location",
-      type: "string"
+      type: "string",
+      hidden: ({document}) => document?.attendanceMode === 'online' || document?.attendanceMode === 'none'
     }),
     // defineField({
     //   title: "Country",
