@@ -30,6 +30,14 @@ export const event = defineType({
         layout: 'radio'
       }
     }),
+    {
+      title: 'Part of',
+      name: 'parent',
+      type: 'reference',
+      to: [{type: 'event'}],
+      description: 'If this is part of a larger event, select it here.',
+      hidden: ({document}) => document?.type === 'theme'
+    },
     defineField({
       title: "Attendance Mode",
       name: "attendanceMode",
