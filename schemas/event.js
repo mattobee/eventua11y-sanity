@@ -73,12 +73,6 @@ export const event = defineType({
     //   },
     // }),
     defineField({
-      title: "Online",
-      name: "online",
-      type: "boolean",
-      initialValue: false
-    }),
-    defineField({
       title: "Website",
       name: "website",
       type: "url"
