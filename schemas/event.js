@@ -38,6 +38,26 @@ export const event = defineType({
       description: 'If this is part of a larger event, select it here.',
       hidden: ({document}) => document?.type === 'theme'
     },
+    {
+      title: 'Format',
+      name: 'format',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Talk', value: 'talk' },
+          { title: 'Workshop', value: 'workshop' },
+          { title: 'Tutorial', value: 'tutorial' },
+          { title: 'Roundtable', value: 'roundtable' },
+          { title: 'Competition', value: 'competition' },
+          { title: 'Panel', value: 'panel' },
+          { title: 'Interview', value: 'interview' },
+          { title: 'Demo', value: 'demo' },
+          { title: 'Keynote', value: 'keynote' },
+          { title: 'Announcement', value: 'announcement' },
+          { title: 'Other', value: 'other' }
+        ]
+      }
+    },
     defineField({
       title: "Attendance Mode",
       name: "attendanceMode",
