@@ -102,7 +102,7 @@ export const event = defineType({
       name: 'scheduled',
       type: 'boolean',
       initialValue: true,
-      hidden: ({document}) => document?.partOf || document?.type === 'theme'
+      hidden: ({document}) => !document?.parent || document?.type === 'theme'
     }),
     defineField({
       title: "Starts",
