@@ -30,14 +30,14 @@ export const event = defineType({
         layout: 'radio'
       }
     }),
-    {
+    defineField({
       title: 'Part of',
       name: 'parent',
       type: 'reference',
       to: [{type: 'event'}],
       description: 'If this is part of a larger event, select it here.',
       hidden: ({document}) => document?.type === 'theme'
-    },
+    }),
     {
       title: 'Format',
       name: 'format',
@@ -98,14 +98,23 @@ export const event = defineType({
       type: "url"
     }),
     defineField({
+      title: 'Scheduled',
+      name: 'scheduled',
+      type: 'boolean',
+      initialValue: true,
+      hidden: ({document}) => document?.partOf || document?.type === 'theme'
+    }),
+    defineField({
       title: "Starts",
       name: "dateStart",
-      type: "datetime"
+      type: "datetime",
+      hidden: ({document}) => document?.scheduled === false
     }),
     defineField({
       title: "Ends",
       name: "dateEnd",
-      type: "datetime"
+      type: "datetime",
+      hidden: ({document}) => document?.scheduled === false
     }),
     defineField({
       title: "All day",
