@@ -98,6 +98,13 @@ export const event = defineType({
       type: "url"
     }),
     defineField({
+      title: 'Call for speakers',
+      name: 'callForSpeakers',
+      type: 'boolean',
+      initialValue: false,
+      hidden: ({document}) => document?.type === 'theme'
+    }),
+    defineField({
       title: 'Scheduled',
       name: 'scheduled',
       type: 'boolean',
