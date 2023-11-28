@@ -104,13 +104,7 @@ export const event = defineType({
       initialValue: false,
       hidden: ({document}) => document?.type === 'theme'
     }),
-    defineField({
-      title: 'Awaiting schedule',
-      name: 'awaitingSchedule',
-      type: 'boolean',
-      initialValue: false,
-      hidden: ({document}) => document?.type === 'theme'
-    }),
+
     defineField({
       title: 'Scheduled',
       name: 'scheduled',
