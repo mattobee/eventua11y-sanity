@@ -31,12 +31,20 @@ export const event = defineType({
       }
     }),
     defineField({
+      title: 'This is a parent event',
+      name: 'isParent',
+      type: 'boolean',
+      initialValue: false,
+      description: 'Will this event have sub-events?',
+      hidden: ({document}) => document?.type === 'theme'
+    }),
+    defineField({
       title: 'Part of',
       name: 'parent',
       type: 'reference',
       to: [{type: 'event'}],
       description: 'If this is part of a larger event, select it here.',
-      hidden: ({document}) => document?.type === 'theme'
+      hidden: ({document}) => document?.type === 'theme' || document?.isParent === true
     }),
     {
       title: 'Format',
