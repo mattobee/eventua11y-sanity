@@ -112,7 +112,13 @@ export const event = defineType({
       initialValue: false,
       hidden: ({document}) => document?.type === 'theme'
     }),
-
+    // Call for speakers closing date
+    defineField({
+      title: "Call for speakers closing date",
+      name: "callForSpeakersClosingDate",
+      type: "datetime",
+      hidden: ({document}) => document?.callForSpeakers === false
+    }),
     defineField({
       title: 'Scheduled',
       name: 'scheduled',
