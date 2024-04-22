@@ -29,7 +29,7 @@
     "@sanity/eslint-config-studio": "^4.0.0",
     "@types/react": "^18.2.75",
     "@types/styled-components": "^5.1.26",
-    "eslint": "^8.57.0",
+    "eslint": "^9.1.0",
     "prettier": "^3.0.2",
     "sanity-plugin-recurring-dates": "^1.0.1",
     "typescript": "^5.4.3"
