@@ -69,7 +69,7 @@ export const event = defineType({
       name: "attendanceMode",
       type: "string",
       validation: Rule => Rule.required(),
-      initialValue: "hybrid",
+      initialValue: "online",
       options: {
         list: [
           { title: 'Online', value: 'online' },
