@@ -42,6 +42,7 @@ export const event = defineType({
         name: 'level',
         type: 'string',
         validation: Rule => Rule.required(),
+        initialValue: 'beginner',
         options: {
           list: [
             { title: 'Beginner', value: 'beginner' },
