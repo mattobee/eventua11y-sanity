@@ -94,8 +94,8 @@ export const course = defineType({
         initialValue: false
     }),
     defineField({
-        title: "Certificate",
-        name: "certificate",
+        title: "Credential awarded",
+        name: "credential",
         type: "boolean",
         initialValue: false
     }),
