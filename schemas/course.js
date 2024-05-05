@@ -14,9 +14,10 @@ export const course = defineType({
     defineField({
         title: "Provider",
         name: "provider",
-        type: "string",
+        type: "array",
+        of: [{ type: "reference", to: [{ type: "provider" }] }],
         validation: Rule => Rule.required()
-      }),
+    }),
     defineField({
       title: "Description",
       name: "description",
