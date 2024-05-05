@@ -1,6 +1,6 @@
 import {defineType, defineField} from 'sanity'
 
-export const event = defineType({
+export const course = defineType({
   title: "Courses",
   name: "course",
   type: "document",
@@ -11,6 +11,12 @@ export const event = defineType({
       type: "string",
       validation: Rule => Rule.required()
     }),
+    defineField({
+        title: "Provider",
+        name: "provider",
+        type: "string",
+        validation: Rule => Rule.required()
+      }),
     defineField({
       title: "Description",
       name: "description",
@@ -94,4 +100,4 @@ export const event = defineType({
   ]
 })
 
-export default event;
+export default course;
