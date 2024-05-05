@@ -97,7 +97,14 @@ export const course = defineType({
         title: "Certificate",
         name: "certificate",
         type: "boolean",
-initialValue: false
+        initialValue: false
+    }),
+    defineField({
+        title: "IAAP pre-approved",
+        description: "Whether or not this course is pre-approved for IAAP CAEC credits.",
+        name: "iaap",
+        type: "boolean",
+        initialValue: false
     }),
     defineField({
       title: "Location",
