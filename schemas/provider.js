@@ -1,7 +1,7 @@
 import {defineType, defineField} from 'sanity'
 
 export const provider = defineType({
-  title: "Provider",
+  title: "Providers",
   name: "provider",
   type: "document",
   fields: [
