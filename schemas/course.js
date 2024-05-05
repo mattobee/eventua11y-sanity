@@ -37,6 +37,18 @@ export const event = defineType({
         ]
       }
     },
+    {
+        title: 'Level',
+        name: 'level',
+        type: 'string',
+        options: {
+          list: [
+            { title: 'Beginner', value: 'beginner' },
+            { title: 'Intermediate', value: 'intermediate' },
+            { title: 'Advanced', value: 'advanced' }
+          ]
+        }
+      },
     defineField({
       title: "Attendance Mode",
       name: "attendanceMode",
