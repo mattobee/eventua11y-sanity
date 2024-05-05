@@ -71,6 +71,14 @@ export const course = defineType({
             ]
         }
     }),
+    // Time required hours
+    defineField({
+        title: 'Time required',
+        name: 'timeRequired',
+        type: 'number',
+        validation: Rule => Rule.required(),
+        description: 'The approximate number of hours required to complete this course.'
+    }),
     defineField({
       title: "Attendance Mode",
       name: "attendanceMode",
