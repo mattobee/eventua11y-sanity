@@ -88,14 +88,16 @@ export const course = defineType({
       }
     }),
     defineField({
-      title: "Exam",
-      name: "exam",
-      type: "boolean"
+        title: "Exam",
+        name: "exam",
+        type: "boolean",
+        initialValue: false
     }),
     defineField({
-      title: "Certificate",
-      name: "certificate",
-      type: "boolean"
+        title: "Certificate",
+        name: "certificate",
+        type: "boolean",
+initialValue: false
     }),
     defineField({
       title: "Location",
