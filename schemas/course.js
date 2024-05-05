@@ -18,6 +18,19 @@ export const event = defineType({
       validation: Rule => Rule.required()
     }),
     {
+        title: 'Cost',
+        name: 'cost',
+        type: 'string',
+        validation: Rule => Rule.required(),
+        initialValue: 'paid',
+        options: {
+          list: [
+            { title: 'Paid', value: 'paid' },
+            { title: 'Free', value: 'free' }
+          ]
+        }
+      },
+    {
       title: 'Format',
       name: 'format',
       type: 'string',
