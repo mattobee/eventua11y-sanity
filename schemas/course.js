@@ -12,11 +12,11 @@ export const course = defineType({
       validation: Rule => Rule.required()
     }),
     defineField({
-        title: "Provider",
-        name: "provider",
-        type: "array",
-        of: [{ type: "reference", to: [{ type: "provider" }] }],
-        validation: Rule => Rule.required()
+      title: "Provider",
+      name: "provider",
+      type: "array",
+      of: [{ type: "reference", to: [{ type: "provider" }, { type: "person" }] }],
+      validation: Rule => Rule.required()
     }),
     defineField({
       title: "Teacher",
