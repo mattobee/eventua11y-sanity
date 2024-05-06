@@ -1,8 +1,8 @@
 import {defineType, defineField} from 'sanity'
 
-export const teacher = defineType({
-  title: "Teachers",
-  name: "teacher",
+export const person = defineType({
+  title: "People",
+  name: "person",
   type: "document",
   fields: [
     defineField({
@@ -19,4 +19,4 @@ export const teacher = defineType({
   ]
 })
 
-export default teacher;
+export default person;
