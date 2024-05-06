@@ -2,6 +2,6 @@
 import event from './event'
 import course from './course'
 import provider from './provider'
-import teacher from './person'
+import person from './person'
 
 export const schemaTypes = [event, course, provider, person]

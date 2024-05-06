@@ -22,7 +22,7 @@ export const course = defineType({
       title: "Teacher",
       name: "teacher",
       type: "array",
-      of: [{ type: "reference", to: [{ type: "people" }] }]
+      of: [{ type: "reference", to: [{ type: "person" }] }]
     }),
     defineField({
       title: "Description",
