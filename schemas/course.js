@@ -73,7 +73,8 @@ export const course = defineType({
             list: [
                 { title: 'Beginner', value: 'beginner' },
                 { title: 'Intermediate', value: 'intermediate' },
-                { title: 'Advanced', value: 'advanced' }
+                { title: 'Advanced', value: 'advanced' },
+                { title: 'All', value: 'all' }
             ]
         }
     }),
