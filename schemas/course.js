@@ -82,8 +82,7 @@ export const course = defineType({
     defineField({
         title: 'Target audience',
         name: 'targetAudience',
-        type: 'array',
-        of: [{ type: 'string' }],
+        type: 'string',
         options: {
             list: [
                 { title: 'Designers', value: 'designers' },
