@@ -78,6 +78,20 @@ export const course = defineType({
             ]
         }
     }),
+    // Target audience
+    defineField({
+        title: 'Target audience',
+        name: 'targetAudience',
+        type: 'array',
+        of: [{ type: 'string' }],
+        options: {
+            list: [
+                { title: 'Designers', value: 'designers' },
+                { title: 'Developers', value: 'developers' },
+                { title: 'Broad', value: 'broad' }
+            ]
+        }
+    }),
     // Time required hours
     defineField({
         title: 'Time required',
