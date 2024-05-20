@@ -15,6 +15,12 @@ export const provider = defineType({
       title: "Website",
       name: "website",
       type: "url"
+    }),
+    defineField({
+      title: "Affiliate",
+      name: "affiliate",
+      type: "boolean",
+      initialValue: false
     })
   ]
 })
