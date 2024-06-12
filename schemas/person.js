@@ -12,6 +12,11 @@ export const person = defineType({
       validation: Rule => Rule.required()
     }),
     defineField({
+      title: "Title",
+      name: "title",
+      type: "string"
+    }),
+    defineField({
       title: "Website",
       name: "website",
       type: "url"
