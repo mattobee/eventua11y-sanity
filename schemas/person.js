@@ -13,7 +13,7 @@ export const person = defineType({
     }),
     defineField({
       title: "Title",
-      name: "title",
+      name: "roleTitle",
       type: "string"
     }),
     defineField({
