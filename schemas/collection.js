@@ -2,7 +2,7 @@
 import {defineType, defineField} from 'sanity'
 
 export const collection = defineType({
-  title: "Colletion",
+  title: "Collection",
   name: "collection",
   type: "document",
   fields: [
