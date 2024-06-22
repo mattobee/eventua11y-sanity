@@ -25,6 +25,12 @@ export const course = defineType({
       of: [{ type: "reference", to: [{ type: "person" }] }]
     }),
     defineField({
+      title: "Collection",
+      name: "collection",
+      type: "array",
+      of: [{ type: "reference", to: [{ type: "collection" }] }]
+    }),
+    defineField({
       title: "Description",
       name: "description",
       type: "text",
