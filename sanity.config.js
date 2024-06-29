@@ -1,5 +1,4 @@
 import {defineConfig} from 'sanity'
-import {deskTool} from 'sanity/desk'
 import {visionTool} from '@sanity/vision'
 import {countryStateListPlugin} from 'sanity-plugin-country-state-select'
 import {recurringDates} from 'sanity-plugin-recurring-dates'
@@ -13,7 +12,7 @@ export default defineConfig([
     name: 'production',
     basePath: '/production',
     title: 'Production',
-    plugins: [deskTool(), visionTool(), countryStateListPlugin(), recurringDates(), crossDatasetDuplicator({
+    plugins: [visionTool(), countryStateListPlugin(), recurringDates(), crossDatasetDuplicator({
       types: ['event'],
       follow: []
     })],
@@ -27,7 +26,7 @@ export default defineConfig([
     name: 'development',
     basePath: '/test',
     title: 'Development',
-    plugins: [deskTool(), visionTool(), countryStateListPlugin(), recurringDates()],
+    plugins: [visionTool(), countryStateListPlugin(), recurringDates()],
     schema: {
       types: schemaTypes,
     },
