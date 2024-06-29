@@ -16,6 +16,12 @@ export const collection = defineType({
       title: "Description",
       name: "description",
       type: "text"
+    }),
+    defineField({
+      title: "Courses",
+      name: "courses",
+      type: "array",
+      of: [{ type: "reference", to: [{ type: "course" }] }]
     })
   ]
 })
